@@ -1,0 +1,20 @@
+<h1>Zoos#edit</h1>
+<p>Find me in app/views/zoos/edit.html.erb</p>
+
+<% if (@zoo.errors.any?) %>
+	<% @zoo.errors.full_messages.each do |error| %>
+	<p style="color:red;">
+		<%= error %>
+	</p>
+	<% end %>
+<% end %>
+
+<%= form_for @zoo do |z|%>
+<%= z.label "name" %>
+<%= z.text_field :name %><br/>
+<%= z.label "location" %>
+<%= z.text_field :location %><br/>
+<%= z.label "year opened" %>
+<%= z.text_field :year_opened %><br/>
+<%= z.submit "Edit Zoo" %>
+<% end %>

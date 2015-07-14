@@ -1,0 +1,17 @@
+<h1>Zoos#show</h1>
+<p>Find me in app/views/zoos/show.html.erb</p>
+
+<p>
+Zoo:
+<%= @zoo.name %>
+<%= @zoo.location %>
+<%= @zoo.year_opened %>
+</p>
+
+<%= @zoo.name %>'s animals:
+<% @zoo.animals.each do |animal| %>
+<p>name: <%= animal.name %>
+species: <%= animal.species %></p>
+<% end %>
+
+<%= link_to "Delete", @zoo, method: :delete, data: {confirm: "Are you sure?"} %>

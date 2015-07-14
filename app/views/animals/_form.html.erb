@@ -1,0 +1,15 @@
+<% if (@animal.errors.any?) %>
+	<% @animal.errors.full_messages.each do |error| %>
+	<p style="color:red;">
+		<%= error %>
+	</p>
+	<% end %>
+<% end %>
+
+<%= form_for [@zoo, @animal] do |z| %>
+	<%= z.label "name" %>
+	<%= z.text_field :name %><br/>
+	<%= z.label "species" %>
+	<%= z.text_field :species %><br/>
+	<%= z.submit "Create Animal" %>
+<% end %>
