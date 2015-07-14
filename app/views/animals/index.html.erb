@@ -1,9 +1,10 @@
 <h1>Animals#index</h1>
 <p>Find me in app/views/animals/index.html.erb</p>
 
+<p>Zoo: <%= @zoo_animals.name %></p>
 <% @animals.each do |animal| %>
 <p>id: <%= animal.id %>
 name: <%= animal.name %>
 species: <%= animal.species %></p>
-
+<%= link_to "show", animal_path(animal) %>
 <% end %>

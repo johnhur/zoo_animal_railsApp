@@ -1,2 +1,6 @@
 <h1>Animals#show</h1>
 <p>Find me in app/views/animals/show.html.erb</p>
+
+<p>Name: <%= @animal.name %></p>
+<p>Species: <%= @animal.species %></p>
+<%= link_to "delete", @animal, method: :delete, data: {confirm: "Are you sure?"} %>
